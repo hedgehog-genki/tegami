@@ -1,0 +1,110 @@
+<div id="top"class="ui inverted attached center aligned basic segment">
+  <div id="headercontainer" class="ui text container">
+    <h1 id="maintitle" class="ui center aligned header"><span class="sub header">桃鈴ねね活動1周年記念企画</span><span>Omoi</span><span class="sub header">手紙で想いを伝えませんか？</span></h1>
+    <% if user_signed_in? %>
+      <div id="login" class="ui center aligned grid">
+        <button class="ui secondary button"><%= link_to '手紙を書く', new_letter_path , class:"linkto" %></button>
+      </div>
+    <% else %>
+      <div id="login" class="ui center aligned grid">
+        <% if user_signed_in? %>
+          <button class="ui secondary button"><%= link_to '手紙を書く', new_letter_path, class:"linkto" %></button>
+        <% else %>
+          <button class="ui secondary button"><%= link_to '手紙を書く(手紙を書くにはログインが必要です)', new_user_session_path, class:"linkto" %></button>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="main-content">
+  <% if user_signed_in? %>
+    <button class="ui secondary button"><%= link_to 'マイページ', "/users/#{current_user.id}", class:"linkto" %></button>
+  <% end %>
+  <div class="ui center aligned grid">
+    <div id="step" class="ui large steps">
+      <div class="step">
+        <i class="users green icon"></i>
+      <div class="content">
+        <div class="title">会員登録する</div>
+      </div>
+      </div>
+    <div class="step">
+      <i class="payment teal icon"></i>
+      <div class="content">
+        <div class="title">フォーマットに合わせて手紙を書く</div>
+      </div>
+    </div>
+      <div class="step">
+      <i class="paper plane outline blue icon"></i>
+      <div class="content">
+        <div class="title">投稿する</div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <h2 class="ui center aligned icon header">
+    <i class="users green icon"></i>
+    <div class="content">
+      <span id="h2_under_line">STEP1 会員登録する</span>
+      <div class="sub header">
+        <p>メールアドレスがあればOK<br>Googleアカウントがあれば面倒な登録は不要です</p>
+      </div>
+    </div>
+  </h2>
+  <h2 class="ui center aligned icon header">
+    <i class="edit teal icon"></i>
+    <div class="content">
+      <span id="h2_under_line">STEP2 フォーマットに合わせて手紙を書く</span>
+      <div class="sub header">
+        <p>ペンや紙は一切不要<br>WEB上で文章を書けばそのまま手紙になってねねちに届きます</p>
+      </div>
+    </div>
+  </h2>
+  <h2 class="ui center aligned icon header">
+    <i class="paper plane outline blue icon"></i>
+    <div class="content">
+      <span id="h2_under_line">STEP3 投稿する</span>
+      <div class="sub header">
+        <p>面倒な配送は一切不要</p>
+      </div>
+    </div>
+  </h2>
+  <h2 class="ui center aligned header"><span id="h2_under_line">FAQ</span></h2>
+  <div class="ui icon message">
+    <i class="money bill alternate outline teal icon"></i>
+      <div class="content">
+        <div class="header">
+          料金は無料ですか？
+        </div>
+        <p>無料でご利用いただけます。</p>
+      </div>
+  </div>
+  <div class="ui icon message">
+  <i class="envelope open outline blue icon"></i>
+  <div class="content">
+    <div class="header">
+      手紙の内容は公開されますか？
+    </div>
+    <p>公開はされませんが、送付前に誹謗中傷や政治、宗教に関する記述、個人情報の記述がないか、チェックさせていただき、送付いたします。</p>
+  </div>
+  </div>
+    <div class="ui icon message">
+    <i class="sign language teal icon"></i>
+      <div class="content">
+        <div class="header">
+          海外からでも利用できますか？
+        </div>
+        <p>ご利用可能です。また投稿を行えば、発送は日本国内で行うため、面倒な発送手続きは不要です。</p>
+      </div>
+  </div>
+  <div class="ui icon message">
+  <i class="globe blue icon"></i>
+  <div class="content">
+    <div class="header">
+      翻訳してもらうことは可能ですか？
+    </div>
+    <p>英語については翻訳可能です。その他言語も特定ができれば翻訳することは可能です。</p>
+  </div>
+  </div>
+</div>

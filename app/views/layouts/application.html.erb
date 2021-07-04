@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fanletter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link rel="stylesheet" type="text/css" href="assets/semantic/semantic.min.css">
+  </head>
+
+  <body>
+    <%= yield %>
+  <footer class="ui center aligned basic segment" style="margin-top: 1em;">
+    <div class="ui center aligned grid">
+      <div data-tooltip="facebookでシェアする" data-position="top left" data-inverted data-variation="mini" class="ui facebook small icon circular button">
+        <i class="facebook icon"></i>
+      </div>
+      <div data-tooltip="Twitterでシェアする" data-position="top left" data-inverted data-variation="mini" class="ui twitter small icon circular button">
+        <i class="twitter icon"></i>
+      </div>
+    </div>
+    <div class="ui basic segment">
+      <p>カバー株式会社様、およびホロライブプロダクションとは⼀切関係ありません。</p>
+      <p>当サイトで使⽤している画像の著作権・肖像権等は各権利者に帰属いたします。</p>
+    </div>
+  </footer>
+  </body>
+</html>

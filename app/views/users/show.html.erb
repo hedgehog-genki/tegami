@@ -1,0 +1,6 @@
+<div class="contents row">
+  <p><%= @name %>さんの手紙</p>
+  <% @letters.each do |letter| %>
+    <p><%= letter.image %></p>
+  <% end %>
+</div>
