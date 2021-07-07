@@ -3,7 +3,7 @@
     <h1 id="maintitle" class="ui massive center aligned header"><span id="subtitle" class="sub header">桃鈴ねね活動1周年記念企画</span><span id="maintitleheader">Omoi</span><span id="subtitle" class="sub header">手紙で想いを伝えませんか？</span></h1>
     <% if user_signed_in? %>
       <div id="login" class="ui center aligned grid">
-        <button class="ui secondary button"><%= link_to '手紙を書く', new_letter_path , class:"linkto" %></button>
+        <button class="ui secondary basic button"><%= link_to '手紙を書く', new_letter_path , class:"linkto" %></button>
       </div>
     <% else %>
       <div id="login" class="ui center aligned grid">
@@ -18,9 +18,11 @@
 </div>
 
 <div class="main-content">
+  <div class="ui center aligned grid">
   <% if user_signed_in? %>
-    <button id="mypage" class="ui right floated secondary button"><%= link_to 'マイページ', "/users/#{current_user.id}", class:"linkto" %></button>
+    <button id="mypage" class="ui secondary button"><%= link_to 'マイページ', "/users/#{current_user.id}", class:"linkto" %></button>
   <% end %>
+  </div>
   <div class="ui center aligned grid">
     <div id="step" class="ui large steps">
       <div class="step">

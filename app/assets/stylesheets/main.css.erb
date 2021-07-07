@@ -1,12 +1,12 @@
 #top{
-  background-image: url("<%= asset_path('nenetestver.jpeg') %>");
+  background-image: url("<%= asset_path('nenetop.jpeg') %>");
   width:100vw;
   height:70vh;
   background-repeat: no-repeat;
   background-size:cover;
   background-position:50%;
   position: relative;
-
+  border:none;
 }
 
 #step{
@@ -85,4 +85,60 @@
 #letteredit{
   margin:auto;
   width:75vw;
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  #top{
+  width:100vw;
+  }
+
+  #maintitle{
+  top:40%;
+  }
+
+  #subtitle{
+  font-size:1.5rem;
+  }
+
+  #step{
+   margin:1rem;
+   padding:0.5rem;
+  }
+
+  #mypage{
+   margin:1rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  body{
+  margin:auto;
+  }
+  #top{
+  width:100vw;
+  }
+
+  #step{
+   margin:0,5rem;
+   padding:0.5rem;
+   width:720px;
+   font-size:0.7rem;
+  }
+}
+
+@media (max-width: 599px) {
+
+  body{
+  margin:auto;
+  }
+
+  #step{
+  display:none;
+  }
+
+  #mypage{
+  margin:1rem;
 }
