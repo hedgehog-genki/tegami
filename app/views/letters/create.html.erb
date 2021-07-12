@@ -1,6 +1,17 @@
 <div class="">
   <div class="success">
     <h3>手紙の作成が完了しました。</h3>
+    <div class="ui error message">
+      <i class="close icon"></i>
+      <div class="header">
+        発送について
+      </div>
+      <ul class="list">
+        <li>発送は内容の校閲後、全て一斉に行います</li>
+        <li>発送は8/6を予定しております</li>
+        <li>詳しい日程については<%= link_to "運営者のTwitter", 'https://twitter.com/hedgehog_nene' %>より発表いたします</li>
+      </ul>
+    </div>
     <%= link_to "戻る", root_path %>
   </div>
 </div>

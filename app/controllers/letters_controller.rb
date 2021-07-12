@@ -7,13 +7,12 @@ class LettersController < ApplicationController
   end
 
   def create
-    @letter=Letter.create(letter_params)
+    @letter = Letter.create(letter_params)
     if @letter.save
       redirect_to root_path
     else
       render :new
     end
-
   end
 
   def show

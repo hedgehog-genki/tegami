@@ -1,10 +1,9 @@
 <div id="letteredit">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.slim.min.js"></script>
   <script>
     $(function() {
         $('#liveeditor').keyup(function() {
-          $('#livepreview').html(this.value.replace(/\n/g, '<br/>'));
-            //$('#livepreview').html($('#liveeditor').val());
+          //$('#livepreview').html(this.value.replace(/\n/g, '<br/>'));
+          $('#livepreview').html($('#liveeditor').val());
         });
     });
   </script>
@@ -56,6 +55,14 @@
       <li>政治、宗教に関する事項</li>
     </ul>
     </div>
+    <div class="ui success message">
+      <i class="close icon"></i>
+      <div class="header">
+        文字数の制限について
+      </div>
+      <p>改行なしで、ひらがな・漢字で約630文字入力可能です。</p>
+      <p>絵文字も使用できます。</p>
+    </div>
     <div id="letter">
     <div class="ui form">
     <div class="field">
@@ -77,24 +84,24 @@
         <div id="livepreview">
         </div>
         <div class="ui steps">
-        <div class="step">
-          <div class="title">STEP2 作成した手紙をダウンロードする</div>
-          <div class="description">作成した手紙をダウンロードボタンからダウンロードしてください</div>
-        </div>
+          <div class="step">
+            <div class="title">STEP2 作成した手紙をダウンロードする</div>
+            <div class="description">作成した手紙をダウンロードボタンからダウンロードしてください</div>
+          </div>
         </div>
         <br>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
         <input id="download-btn" type="button" value="download image">
-        <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
         <script>
-        var btn = document.getElementById("download-btn");
+          var btn = document.getElementById("download-btn");
           btn.addEventListener("click",() => {
-          html2canvas(document.querySelector("#livepreview")).then(canvas => { 
-          let downloadEle = document.createElement("a");
-          downloadEle.href = canvas.toDataURL("image/png");
-          downloadEle.download = "letter.png";
-          downloadEle.click();
-          });
-        })
+              html2canvas(document.querySelector("#livepreview")).then(canvas => { 
+                let downloadEle = document.createElement("a");
+                downloadEle.href = canvas.toDataURL("image/png");
+                downloadEle.download = "letter.png";
+                downloadEle.click();
+            });
+          })
         </script>
         <br>
         <div class="ui steps">
