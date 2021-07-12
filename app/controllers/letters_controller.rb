@@ -9,7 +9,6 @@ class LettersController < ApplicationController
   def create
     @letter = Letter.create(letter_params)
     if @letter.save
-      redirect_to root_path
     else
       render :new
     end
@@ -21,6 +20,6 @@ class LettersController < ApplicationController
   private
 
   def letter_params
-    params.require(:letter).permit(:text, :image).merge(user_id: current_user.id)
+    params.require(:letter).permit(:text).merge(user_id: current_user.id)
   end
 end

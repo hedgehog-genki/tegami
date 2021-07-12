@@ -16,24 +16,24 @@
         </div>
       </div>
       <div class="step">
+        <i class="envelope open outline icon"></i>
+        <div class="content">
+          <div class="title">2.送るボタンを押す</div>
+          <div class="description">「送る」ボタンを押すと登録完了します</div>
+        </div>
+      </div>
+      <div class="step">
         <i class="download icon"></i>
         <div class="content">
-          <div class="title">2.作成した手紙をダウンロードする</div>
-          <div class="description">作成した手紙をダウンロードボタンから<br>ダウンロードしてください</div>
+          <div class="title">3.メールアドレスに完成した画像が届く</div>
+          <div class="description">登録した内容を元に手紙が作成され、<br>登録したメールアドレスに画像が届きます</div>
         </div>
       </div>
       <div class="step">
         <i class="upload icon"></i>
         <div class="content">
-          <div class="title">3.ダウンロードした画像をアップロードする</div>
-          <div class="description">ダウンロードした画像を<br>そのままアップロードしてください</div>
-        </div>
-      </div>
-      <div class="step">
-        <i class="envelope open outline icon"></i>
-        <div class="content">
-          <div class="title">4.送るボタンを押す</div>
-          <div class="description">「送る」ボタンを押すと送信完了！</div>
+          <div class="title">4.画像がOKなら、送付されます</div>
+          <div class="description">送付した手紙が問題なければ、<br>その内容でホロライブへ送付されます</div>
         </div>
       </div>
     </div>
@@ -43,6 +43,14 @@
       <div class="description">テキスト入力欄にて手紙を書いてください</div>
     </div>
     </div>
+    <br>
+    <h2 class="ui header">
+      <i class="eye icon"></i>
+      <div class="content">
+        完成図イメージ
+      </div>
+    </h2>
+    <%= image_tag 'letterbackground.001.jpg', id: :livepreview %>
     <div class="ui error message">
     <i class="close icon"></i>
     <div class="header">
@@ -70,83 +78,37 @@
         <%= form.text_area :text, placeholder: "ここに本文を記入", rows: "10",class: :form_text,id: :liveeditor %>
     </div>
     </div>
-        <h2 class="ui header">
-        <i class="camera icon"></i>
-        <div class="content">
-          プレビュー
-        </div>
-        </h2>
-        <style type="text/css">
-          #livepreview{
-            font-family:"huifont";
-          }
-        </style>
-        <div id="livepreview">
-        </div>
         <div class="ui steps">
           <div class="step">
-            <div class="title">STEP2 作成した手紙をダウンロードする</div>
-            <div class="description">作成した手紙をダウンロードボタンからダウンロードしてください</div>
+            <div class="title">STEP2 送るボタンを押す</div>
+            <div class="description">「送る」ボタンを押すと送信完了！</div>
           </div>
-        </div>
-        <br>
-        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-        <input id="download-btn" type="button" value="download image">
-        <script>
-          var btn = document.getElementById("download-btn");
-          btn.addEventListener("click",() => {
-              html2canvas(document.querySelector("#livepreview")).then(canvas => { 
-                let downloadEle = document.createElement("a");
-                downloadEle.href = canvas.toDataURL("image/png");
-                downloadEle.download = "letter.png";
-                downloadEle.click();
-            });
-          })
-        </script>
-        <br>
-        <div class="ui steps">
-        <div class="step">
-          <div class="title">STEP3 ダウンロードした画像をアップロードする</div>
-          <div class="description">ダウンロードした画像をそのままアップロードしてください</div>
-        </div>
-        </div>
-          <div class="ui placeholder segment">
-            <div class="ui icon header">
-              <i class="file image outline icon"></i>
-              クリックしてファイルをアップロード
-            </div>
-            <label class="ui primary button">
-              <%= form.file_field :image,style: "display:none;"%>
-              ファイルを選択
-            </label>
-          </div>
-          <div class="ui error message">
-            <i class="close icon"></i>
-            <div class="header">
-              注意事項
-            </div>
-            <ul class="list">
-              <li>ダウンロードした画像はそのままアップロードしてください</li>
-              <li>ファイル名の変更やサイズの変更を行うと手紙が正常に読み込まれない可能性があります</li>
-            </ul>
-          </div>
-        <div class="ui steps">
-        <div class="step">
-          <div class="title">STEP4 送るボタンを押す</div>
-          <div class="description">「送る」ボタンを押すと送信完了！</div>
-        </div>
         </div>
         <div class="ui warning message">
           <div class="header">
           「送る」ボタンを押す前に確認してください
           </div>
           <ul class="list">
-            <li>手紙の内容に個人情報や金券の情報、誹謗中傷の記載はないですか？</li>
-            <li>アップロードした画像のファイル名はダウンロードした時のままですか？</li>
+            <li>手紙の内容に個人情報や金券の情報、誹謗中傷などの記載はないですか？</li>
+            <li>翻訳を希望される場合はその旨を本文に記述をお願いします</li>
+            <li>If you would like a translation, please state so in the text.</li>
           </ul>
         </div>
-        <br>
         <%= form.submit "送る",class:"massive ui secondary button" %>
-      <% end %>
+        <% end %>
+        <br>
+        <div class="ui steps">
+        <div class="step">
+          <div class="title">STEP3 メールアドレスに完成した画像が届く</div>
+          <div class="description">登録した内容を元に手紙が作成され、登録したメールアドレスに画像が届きます</div>
+        </div>
+        </div>
+        <div class="ui steps">
+        <div class="step">
+          <div class="title">STEP4 画像がOKなら、送付されます</div>
+          <div class="description">送付した手紙が問題なければ、その内容でホロライブへ送付されます</div>
+        </div>
+        </div>
+        <br>
     </div>
 </div>

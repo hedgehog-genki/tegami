@@ -1,6 +1,18 @@
-<div class="contents row">
-  <p><%= @name %>さんの手紙</p>
-  <% @letters.each do |letter| %>
-    <p><%= letter.image %></p>
-  <% end %>
+<div id="mypageshow">
+  <div class="contents row">
+    <div class="ui steps" id="mypageicon">
+      <div class="step">
+        <i class="smile outline icon"></i>
+        <div class="content">
+          <div class="title"><%= @name %>さんの手紙</div>
+        </div>
+      </div>
+  </div>
+    <% @letters.each do |letter| %>
+      <div class="ui stacked segment">
+        <h4 class="ui header">投稿日:<%= letter.created_at %></h4>
+        <p><%= letter.text %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
