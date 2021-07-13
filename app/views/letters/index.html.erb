@@ -118,4 +118,7 @@
     <p>英語については翻訳可能です。その他言語も特定ができれば翻訳することは可能です。</p>
   </div>
   </div>
+  <% if user_signed_in? %>
+    <button id="mypage" class="ui secondary button"><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class:'btn' %></button>
+  <% end %>
 </div>
