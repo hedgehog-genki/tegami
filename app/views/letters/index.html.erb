@@ -10,7 +10,7 @@
         <% if user_signed_in? %>
           <button class="ui secondary button"><%= link_to '手紙を書く', new_letter_path, class:"linkto" %></button>
         <% else %>
-          <button class="ui secondary button"><%= link_to '手紙を書く(手紙を書くにはログインが必要です)', new_user_session_path, class:"linkto" %></button>
+          <button class="ui secondary button"><%= link_to '手紙を書く(手紙を書くにはログインが必要です)', new_user_registration, class:"linkto" %></button>
         <% end %>
       </div>
     <% end %>
