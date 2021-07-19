@@ -1,6 +1,6 @@
 # Neneletterの紹介
 
-このアプリは桃鈴ねね(https://twitter.com/momosuzunene)の活動1周年を記念して作成したアプリケーションです。<br>
+このアプリは桃鈴ねね(https://twitter.com/momosuzunene) の活動1周年を記念して作成したアプリケーションです。<br>
 このアプリではWEB上で簡単に桃鈴ねねさんへのファンレターを作成することが出来ます。
 
 ## 紹介動画はこちら
