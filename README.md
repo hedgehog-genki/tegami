@@ -4,7 +4,7 @@
 このアプリではWEB上で簡単に桃鈴ねねさんへのファンレターを作成することが出来ます。
 
 ## 紹介動画について
-
+https://github.com/hedgehog-genki/tegami/issues/6#issue-948248402
 
 ※下記URLにフルバージョンが掲載されています
 ## URL
