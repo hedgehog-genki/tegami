@@ -28,6 +28,7 @@ http://neneletter.com/
 - DB：MySQL
 
 ## インフラ構成図
+![Untitled Diagram (1)](https://user-images.githubusercontent.com/84561429/126310474-d66816e3-0aa3-4510-bbb2-8d5676a0a7d2.jpg)
 
 ## スタッフ
 
