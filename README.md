@@ -32,8 +32,8 @@ http://neneletter.com/
 
 ## スタッフ
 
-- コーディング：ハリネズミの日記(https://twitter.com/hedgehog_nene)
-- イラスト制作：meri / めり(https://twitter.com/hmn_mrr)
+- フロントエンド・サーバーサイドコーディング・インフラ構築：ハリネズミの日記(https://twitter.com/hedgehog_nene)
+- トップページ イラスト制作：meri / めり(https://twitter.com/hmn_mrr)
 
 ## テーブル設計
 
