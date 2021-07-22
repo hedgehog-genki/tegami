@@ -6,6 +6,9 @@
 ## 紹介動画について
 ![GIF](https://user-images.githubusercontent.com/84561429/126263828-c6de882f-eb1f-40e5-a3fd-448b28891acb.gif)
 <br>※下記URLにフルバージョンが掲載されています
+
+<video src="https://drive.google.com/file/d/1nWsJFKOlTc34im_hYn_N_IrgcvBJWCRb/view?usp=sharing"></video>
+
 ## URL
 http://neneletter.com/
 
