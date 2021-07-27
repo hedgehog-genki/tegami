@@ -1,7 +1,8 @@
 # Neneletterの紹介
 <img width="751" alt="スクリーンショット 2021-07-18 18 04 13" src="https://user-images.githubusercontent.com/84561429/126598681-ec4df28c-2855-46d7-be19-44e5a2a525f2.png">
 このアプリは桃鈴ねね(https://twitter.com/momosuzunene) の活動1周年を記念して作成したアプリケーションです。<br>
-このアプリではWEB上で簡単に桃鈴ねねさんへのファンレターを作成することが出来ます。
+このアプリではWEB上で簡単に桃鈴ねねさんへのファンレターを作成することが出来ます。<br>
+本アプリはイラストレーターのめりさんと私、宮内にて共同制作いたしました。
 
 ## 紹介動画はこちら
 
@@ -77,7 +78,7 @@ http://neneletter.com/
 
 ## スタッフ
 
-- フロントエンド・サーバーサイドコーディング・インフラ構築：ハリネズミの日記(https://twitter.com/hedgehog_nene)
+- フロントエンド・サーバーサイドコーディング・インフラ構築：宮内(HN:ハリネズミの日記 https://twitter.com/hedgehog_nene)
 - トップページ イラスト制作：meri / めり(https://twitter.com/hmn_mrr)
 
 ## テーブル設計
